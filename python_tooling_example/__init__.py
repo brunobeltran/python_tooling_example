@@ -29,4 +29,6 @@ as long as it helps describe the package."""
 from .example_module import add_2
 from .example_subpackage.daughter_module import concat_2
 
-__version__ = '0.0.1'
+from ._version import get_versions
+__version__ = get_versions()['version']
+del get_versions

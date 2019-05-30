@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import python_tooling_example
+import versioneer
 from setuptools import setup
 
 def readme():
@@ -8,7 +8,8 @@ def readme():
         return f.read()
 
 setup(name='python_tooling_example',
-      version=python_tooling_example.__version__,
+      version=versioneer.get_version(),
+      cmdclass=versioneer.get_cmdclass(),
       description='Example Python package using Pytest, Sphinx, Travis, Versioneer and Github.',
       long_description=readme(),
       author='Bruno Beltran',
