@@ -307,6 +307,58 @@ for different parts of my package. For an example of what this looks like for a
 more "realistic" Python project, see `the documentation for the
 multi_locus_analysis package <http://multi-locus-analysis.rtfd.io>`_.
 
+Creating a "Page"
+^^^^^^^^^^^^^^^^^
+
+While normally label names and reference names are used as described above
+(and have no relationship to the name of the file containing the label), Sphinx
+finds documentation pages by looking for files whose file name matches a
+label referenced by the ``.. toctree::`` directive of your ``index.rst`` file.
+
+In English, what that means is that to add a new page to your documentation
+website, you must first add an entry to the toctree, like ``API reference
+<api>``, for example. Then you must create a file whose name EXACTLY matches the
+label (the bit in angle brackets, so in this case the file must be called
+``api.rst``).
+
+Finally, in order for that file to be correctly linked to, make sure that it
+has a label on its main title. In the case above, the file would start with
+something like::
+
+    .. _api:
+
+    API reference
+    =============
+
+Do this for each page you wish to create.
+
+Layout of the website
+^^^^^^^^^^^^^^^^^^^^^
+
+I try to use a simple layout for my documentation websites. Namely, my toctree
+points to any tutorials that I might have set up for my package, and then
+has one final entry for the API documentation. See the code for this website
+for an example.
+
+API Docs
+^^^^^^^^
+
+The main strength of Sphinx is its ability to understand Python code and
+docstrings automagically. However, I would be lying if I didn't admit that most people find the "autosummary module" that comes with sphinx to
+be not quite... *auto* ...enough.
+
+But that's no big deal! Some bright people have written an "autoautosummary" extension that is much easier to
+use. It's not included in mainline sphinx however, so we'll have to copy
+the code into our ``conf.py`` ourselves.
+
+First copy the ``Manual extensions`` section of this package's
+``conf.py`` file into your own project, and add ``sphinx.ext.autosummary`` to the
+list of required extensions in ``conf.py``. Then, copy the
+``doc/source/_templates/autosummary_module.rst`` file from this package into
+your own repo.
+
+Now, simply copy the ``api.rst`` file from this repo and create one entry per
+module that you want to document!
 
 .. _auto-doc:
 
