@@ -6,6 +6,17 @@
 Welcome to python_tooling_example's documentation!
 ==================================================
 
+In this documentation, you will find a complete guide to taking a simple Python
+package and adding to it a useful set of continuous integration tools.
+
+In addition, we will go over some documentation best practices and a
+step-by-step guide on how to incorporate your documentation into a useful
+website like ReadTheDocs.org.
+
+Please visit `this package's Github page
+<https://github.com/brunobeltran/python_tooling_example>`_ to follow along with this guide using
+that package as an example.
+
 .. toctree::
    :maxdepth: 1
    :caption: Contents:

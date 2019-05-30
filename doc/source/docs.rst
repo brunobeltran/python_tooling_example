@@ -308,4 +308,14 @@ more "realistic" Python project, see `the documentation for the
 multi_locus_analysis package <http://multi-locus-analysis.rtfd.io>`_.
 
 
+.. _auto-doc:
+
+ReadTheDocs.org
+===============
+
+Once you have your Sphinx documentation building locally (i.e. ``make html``
+works in the ``doc`` directory), then all that's left to get a beautiful website
+online for your package is to make an account on `ReadTheDocs.org
+<https://readthedocs.org>`, then follow the instructions to link this account
+with your Github account!
 
