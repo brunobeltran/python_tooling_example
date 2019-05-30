@@ -1,13 +1,16 @@
 .. _ci:
 
+Continuous Integration Tools
+============================
+
 Travis
-======
+------
 
 `Travis <https://travis-ci.org/>`_ is a so-called "continuous integration" suite. Usually, that's
 fancy speak for "builds/tests your code when you push to Github".
 
 
-In order to set up Travis to automatically build your code, simply make an
+In order to set up Travis to automatically build/test your code, simply make an
 account `on their website <https://travis-ci.org/>`_ and follow the instructions
 to link this with your Github account.
 
@@ -21,10 +24,12 @@ own git repo.
     PyPI <auto-pypi>` below, or simply delete the "deploy" section of the
     ``yml`` file for now.
 
+By default, this ``travis.yml`` file simply runs ``pytest``.
+
 .. _versioneer:
 
 Versioneer
-==========
+----------
 
 My favorite way to keep track of versions is using the `Versioneer
 package <https://github.com/warner/python-versioneer>`_.
@@ -57,14 +62,15 @@ and make sure that any lines like :code:`__version__ = 'X.Y.Z'` have been
 removed from your main ``__init__.py`` file. Then commit the results.
 
 You can now update your package's version in all the relevant places (there's
-like 2-6, depending on how complicated your package is), by simply tagging the
-relevant git commit with the new version number. (See below for detailed
-instructions).
+like 2-6, depending on how complicated your package is) all at once by simply
+tagging the relevant git commit with the new version number.
+
+See below for detailed instructions.
 
 .. _auto-pypi:
 
 Automatically Pushing to PyPI
-=============================
+-----------------------------
 
 Once you have Versioneer setup, the .travis.yml file included in this directory
 will already be setup to push your code to PyPI any time you "tag" a git commit
@@ -95,3 +101,7 @@ The only change to the ``.travis.yml`` file required is to follow the
 password in the Travis configuration file (you'll see mine encrypted there by
 default, under ``deploy -> password -> secure``.
 
+Automatically Deploying Documentation
+-------------------------------------
+
+This is covered in the :ref:`Sphinx Autodoc <auto-doc>` section.

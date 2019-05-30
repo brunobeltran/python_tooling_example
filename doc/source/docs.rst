@@ -191,8 +191,8 @@ Canonically, the folder structure of a Python repo looks like
 |	│	├── make.bat
 |	│	├── Makefile
 |	│	└── source
-|	│		├── conf.py
-|	│		└── index.rst
+|	│...	 ...	├── conf.py
+|	│...	 ...	└── index.rst
 |	├── LICENSE
 |	├── README.md
 |	├── requirements.txt
@@ -311,11 +311,11 @@ multi_locus_analysis package <http://multi-locus-analysis.rtfd.io>`_.
 .. _auto-doc:
 
 ReadTheDocs.org
-===============
+---------------
 
 Once you have your Sphinx documentation building locally (i.e. ``make html``
 works in the ``doc`` directory), then all that's left to get a beautiful website
 online for your package is to make an account on `ReadTheDocs.org
-<https://readthedocs.org>`, then follow the instructions to link this account
+<https://readthedocs.org>`_, then follow the instructions to link this account
 with your Github account!
 

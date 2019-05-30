@@ -25,6 +25,9 @@ that package as an example.
    Sphinx Documentation <docs>
    Continuous Integration (Travis + Versioneer + Pytest) <ci>
 
+   Tutorial Notebook Example <Notebook>
+   Example API Docs <api>
+
 Indices and tables
 ==================
 

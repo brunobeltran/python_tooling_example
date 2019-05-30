@@ -42,6 +42,8 @@ release = python_tooling_example.__version__
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
+    'sphinx.ext.autosummary',
+    'nbsphinx',
     'sphinx.ext.doctest',
     'sphinx.ext.todo',
     'sphinx.ext.mathjax',
