@@ -6,8 +6,9 @@ Continuous Integration Tools
 Travis
 ------
 
-`Travis <https://travis-ci.org/>`_ is a so-called "continuous integration" suite. Usually, that's
-fancy speak for "builds/tests your code when you push to Github".
+`Travis <https://travis-ci.org/>`_ is a so-called "continuous integration"
+suite. Usually, that's fancy speak for "builds/tests your code when you push to
+Github".
 
 
 In order to set up Travis to automatically build/test your code, simply make an
